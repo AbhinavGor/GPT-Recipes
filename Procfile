@@ -1,1 +1,1 @@
-web: gunicorn 'gptrecipes.wsgi'
+web: gunicorn gptrecipes.wsgi --log-file -
