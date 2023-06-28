@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="col-md-6 offset-md-2">
+    {% if item_name %}
+        <h2>We have generated this recipe for you!</h2>
+        <strong>{{ item_name }}</strong><br />
+        <strong>Ingredients</strong><br /><div style="white-space: pre-wrap;">{{ ingredients }}<br /></div>
+        <strong>Instructions<br /></strong><div style="white-space: pre-wrap;">{{ instructions }}<br /></div>
+    {% endif %}
+    {% if recipes %}
+        {% for r in recipes %}
+        <strong>{{ r.item_name }}</strong><br />
+        <strong>Ingredients</strong><br /><div style="white-space: pre-wrap;">{{ r.ingredients }}<br /></div>
+        <strong>Instructions<br /></strong><div style="white-space: pre-wrap;">{{ r.instructions }}<br /></div><br />
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
