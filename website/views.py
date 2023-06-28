@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+def get_recipes(request):
+    pass
+
+def create_recipe(request):
+    pass
