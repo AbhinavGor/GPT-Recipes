@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from .firebase import add_recipe, get_firebase_recipes
-import openai
+import openai, os
 
-openai.api_key = "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"
-
+openai.api_key = os.environ['OPENAI_KEY']
 def get_recipes(request):
     res = get_firebase_recipes()
     return render(request, 'home.html', {'recipes': res})    
