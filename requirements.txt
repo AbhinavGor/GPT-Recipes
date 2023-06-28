@@ -31,9 +31,6 @@ httplib2==0.22.0
 idna==3.4
 msgpack==1.0.5
 multidict==6.0.4
-mysql==0.0.3
-mysql-connector-python==8.0.33
-mysqlclient==2.2.0
 openai==0.27.8
 proto-plus==1.22.3
 protobuf==4.23.3
