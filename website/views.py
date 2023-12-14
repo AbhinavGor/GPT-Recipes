@@ -12,8 +12,8 @@ def create_recipe(request):
         return render(request, 'add_recipe.html')
 
     response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt="give me a recipe to make lunch. I have " + request.POST['ingredients'],
+        model="text-search-davinci-query-001",
+        prompt="give me a recipe to make lunch. I have " + request.POST['ingredients'] + " . The recipe SHOULD have all the ingredients I have mentioned.",
         temperature=0,
         max_tokens=2000,
     )
